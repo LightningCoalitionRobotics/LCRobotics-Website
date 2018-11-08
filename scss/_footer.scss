@@ -1,10 +1,13 @@
-.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: $secondary;
-  color: $white;
-}
-
-.copyright {
-  background-color: darken($secondary, 10%);
+// Styling for the footer
+footer {
+  padding: 50px 0 65px;
+  .list-inline {
+    margin: 0;
+    padding: 0;
+  }
+  .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
