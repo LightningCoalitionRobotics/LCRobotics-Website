@@ -36,22 +36,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" data-scroll href="#top">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="fl-scroll-link" data-scroll href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#robit">Our Robot</a>
+              <a class="nav-link" data-scroll href="#robot">Our Robot</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sponsors">Sponsors</a>
+              <a class="nav-link" data-scroll href="#sponsors">Sponsors</a>
             </li>
 <!--            <li class="nav-item">
               <a class="nav-link" href="#stuff"></a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" data-scroll href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('images/robit.jpg')">
+    <header class="masthead" style="background-image: url('images/robit.jpg')" id="top">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -147,7 +147,7 @@
       </div>
     </div>
 
-    <div class="container" id="robit">
+    <div class="container" id="robot">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <p><h1>Our Robot</h1>(add the three panels)</p>
@@ -260,6 +260,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
