@@ -38,6 +38,11 @@
       cursor: pointer;
     }
 
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
     .prev,
     .next {
       cursor: pointer;
@@ -181,32 +186,32 @@
     <div class="container">
       <div class="mySlides">
         <div class="numbertext">1 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">2 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">5 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">6 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:70%">
+        <img src="images/placeholder.jpg" style="scale:50%">
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -315,6 +320,37 @@
         document.getElementById("compcount").innerHTML = "EXPIRED";
       }
     }, 1000);
+    </script>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
     </script>
 
   </body>
