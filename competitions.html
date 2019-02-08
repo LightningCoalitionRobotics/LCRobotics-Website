@@ -103,7 +103,7 @@
     <div class="container" id="competition">
       <div class="row">
         <h2>Our competition</h2>
-        <p>Our last competition was on January ##. We tried out our first attempt at the challenge. It was an interesting experience.</p>
+        <p>Our last competition was on January 12th, 2019. We tried out our first attempt at the challenge. It was an interesting experience.</p>
       </div>
     </div>
     <div class="row">
@@ -114,39 +114,14 @@
         </div>
         <div class="column">
           <h3>When is our next competition?</h3>
-          <p>Feburary 17th, 2019</p>
+          <p>Feburary 17th, 2019<br><h4>Countdown to the Competition:</h4></p>
+          <p id="compcount" style="font-size:25px"></p>
         </div>
       </div>
       <br>
     </div>
     <h2>Gallery of Photos</h2>
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
 
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
     <br>
     <hr>
 
@@ -205,6 +180,27 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
+
+    <script>
+    var countDownDate = new Date("Feb 17, 2019 8:00:00").getTime();
+    var countdownfunction = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("compcount").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("compcount").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
 
   </body>
 
