@@ -183,32 +183,32 @@
     <div class="container">
       <div class="mySlides">
         <div class="numbertext">1 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/robot/IMG_6119.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">2 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/robot/IMG_6125.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/robot/IMG_6500.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/placeholder.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">5 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/placeholder.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <div class="mySlides">
         <div class="numbertext">6 / 6</div>
-        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+        <img src="images/placeholder.jpg" style="height:475px; width:50%;" class="center">
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -220,22 +220,22 @@
 
       <div class="row">
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(1)" alt="No Image Available">
+          <img class="demo cursor" src="images/robot/IMG_6119.jpg" style="height:142px ;width:100%" onclick="currentSlide(1)" alt="Sarah and Ethan figuring out the best way to use the drawer slide.">
         </div>
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(2)" alt="No Image Available">
+          <img class="demo cursor" src="images/robot/IMG_6125.jpg" style="height:142px ;width:100%" onclick="currentSlide(2)" alt="Ethan holding his old design of the drawer slide mechanism.">
         </div>
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(3)" alt="No Image Available">
+          <img class="demo cursor" src="images/robot/IMG_6500.jpg" style="height:142px ;width:100%" onclick="currentSlide(3)" alt="Our robot (on the right) hanging on the hook before the competition.">
         </div>
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(4)" alt="No Image Available">
+          <img class="demo cursor" src="images/placeholder.jpg" style="height:142px ;width:100%" onclick="currentSlide(4)" alt="No Image Available">
         </div>
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(5)" alt="No Image Available">
+          <img class="demo cursor" src="images/placeholder.jpg" style="height:142px ;width:100%" onclick="currentSlide(5)" alt="No Image Available">
         </div>
         <div class="column2">
-          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(6)" alt="No Image Available">
+          <img class="demo cursor" src="images/placeholder.jpg" style="height:142px ;width:100%" onclick="currentSlide(6)" alt="No Image Available">
         </div>
       </div>
     </div>
@@ -297,6 +297,37 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
 
   </body>
 
