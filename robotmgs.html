@@ -23,25 +23,98 @@
     <link href="css/clean-blog.css" rel="stylesheet">
 
     <style>
-    div.gallery {
-        margin: 5px;
-        border: 1px solid #ccc;
-        float: left;
-        width: 180px;
+    img {
+      vertical-align: middle;
     }
 
-    div.gallery:hover {
-        border: 1px solid #777;
-    }
-
-    div.gallery img {
-        width: 100%;
-        height: auto;
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
 
     div.desc {
         padding: 15px;
         text-align: center;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .column2 {
+      float: left;
+      width: 16.66%;
+    }
+
+    .demo {
+      opacity: 0.4;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    img {
+      vertical-align: middle;
     }
     </style>
   </head>
@@ -107,32 +180,64 @@
         </div>
       </div>
     </div>
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
 
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
 
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
-    </div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
 
-    <div class="gallery">
-      <a target="_blank" href="images/placeholder.jpg">
-        <img src="images/placeholder.jpg" alt="" width="300" height="200">
-      </a>
-      <div class="desc">No images available...</div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/placeholder.jpg" style="scale:50%; width:50%;" class="center">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(1)" alt="No Image Available">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(2)" alt="No Image Available">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(3)" alt="No Image Available">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(4)" alt="No Image Available">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(5)" alt="No Image Available">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/placeholder.jpg" style="width:100%" onclick="currentSlide(6)" alt="No Image Available">
+        </div>
+      </div>
     </div>
     <br>
     <hr>
