@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Griffin Dugan">
 
     <title>LC Robotics Official Website</title>
     <link rel="shortcut icon" href="images/logo_3.ico" />
@@ -191,7 +191,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="column">
           <h3>How did we do?</h3>
-          <p>We didn't do great...</p>
+          <p>We didn't all that well.</p>
         </div>
         <div class="column">
           <h3>When is our next competition?</h3>
@@ -209,6 +209,8 @@
         <h2>A Gallery of Photos</h2>
       </div>
     </div>
+
+    <!-- the large images -->
     <div class="container">
       <div class="mySlides">
         <div class="numbertext">1 / 6</div>
@@ -247,6 +249,7 @@
         <p id="caption"></p>
       </div>
 
+<!-- small slideshow at the bottom. The alt text is the label on the large image. -->
       <div class="row">
         <div class="column2">
           <img class="demo cursor" src="images/comp/IMG_6493.JPG" style="height:142px ;width:100%" onclick="currentSlide(1)" alt="
@@ -283,6 +286,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
+              <!-- Twitter -->
               <li class="list-inline-item">
                 <a href="https://twitter.com/lcrobotics9338">
                   <span class="fa-stack fa-lg">
@@ -291,6 +295,7 @@
                   </span>
                 </a>
               </li>
+              <!-- Facebook -->
               <li class="list-inline-item">
                 <a href="https://www.facebook.com/lcrobotics/">
                   <span class="fa-stack fa-lg">
@@ -299,6 +304,7 @@
                   </span>
                 </a>
               </li>
+              <!-- Github -->
               <li class="list-inline-item">
                 <a href="https://github.com/LightningCoalitionRobotics">
                   <span class="fa-stack fa-lg">
@@ -307,6 +313,7 @@
                   </span>
                 </a>
               </li>
+              <!-- Tumblr -->
               <li class="list-inline-item">
                 <a href="https://www.tumblr.com/blog/lcrobotics">
                   <span class="fa-stack fa-lg">
@@ -333,28 +340,37 @@
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
 
+    <!-- Countdown Scripting -->
     <script>
+    // set the date
     var countDownDate = new Date("Feb 17, 2019 7:00:00").getTime();
     var countdownfunction = setInterval(function() {
       var now = new Date().getTime();
       var distance = countDownDate - now;
 
+      // math for figuring out the days
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+      // compiling all the days, hours, minutes, and seconds all together to make a effective countdown.
       document.getElementById("compcount").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
+      // failsafe for when the countdown expires
       if (distance < 0) {
         clearInterval(countdownfunction);
+        // currently this is written when we are actively in season, but we don't know when the competition date is
         document.getElementById("compcount").innerHTML = "The next competition date is currently unknown.";
       }
     }, 1000);
     </script>
 
+
+<!-- Scripting for the slideshow-esque photos -->
     <script>
+    // I honestly don't fully understand this so... don't expect me to comment this. Sorry.
     var slideIndex = 1;
     showSlides(slideIndex);
 
