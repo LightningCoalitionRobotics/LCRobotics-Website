@@ -22,6 +22,103 @@
     <link href="css/clean-blog.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo_3.ico" />
 
+
+    <style>
+    img {
+      vertical-align: middle;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .column2 {
+      float: left;
+      width: 16.66%;
+    }
+
+    .demo {
+      opacity: 0.4;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+    </style>
+
   </head>
 
   <body>
@@ -98,7 +195,7 @@
         <!-- For future reference, the / is quicker than no slash. Although both work when .htaccess is going active. -->
           <p><h1>Our Robot</h1><!-- <a href="robotmgs.html"><img src="images/robittitle.jpg" width="200" height="200" alt="Robot"/></a> <a href="notebookmgs.html"><img src="images/placeholder.jpg" width="200" height="200" alt="Notebook"/img></a> <a href="codemgs.html"><img src="images/codetitle.jpg" width="200" height="200" alt="Code"/></a></p> -->
 <!-- To robot link -->
-          To learn about our robot, <a href="/robot">click here</a>.
+          Description
           <br>
  <!-- To code link -->
           <!-- To learn about our code, <a href="/code">click here</a>.
@@ -110,11 +207,88 @@
           Little small description of the three links. 1-2 sentences.
           Images that link us to the pages, not "click here"s.
           ?
-        -->
-          <br></p>
+        --></p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- The large images -->
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/robot/IMG_6119.JPG" style="height:475px; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/robot/IMG_6125.JPG" style="height:475px; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/robot/IMG_6500.JPG" style="height:475px; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <iframe width=50% height="475", class="center"
+          src="https://youtube.com/embed/KtCPG5xLsyg">
+        </iframe>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/robot/robot_side.jpg" style="height:475px; width:50%;" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/robot/robot_top.jpg" style="height:475px; width:50%;" class="center">
+      </div>
+
+<!-- Add a video in between the divs -->
+      <!-- <iframe width=50% height="475", class="center"
+        src="youtube URL">
+      </iframe> -->
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+<!-- the small slideshow-esque images. Alt text is the captions on the large images. -->
+      <div class="row">
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/IMG_6119.JPG" style="height:142px ;width:100%" onclick="currentSlide(1)" alt="
+          Sarah and Ethan figuring out the best way to use the drawer slide.">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/IMG_6125.JPG" style="height:142px ;width:100%" onclick="currentSlide(2)" alt="
+          Ethan holding his old design of the drawer slide mechanism.">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/IMG_6500.JPG" style="height:142px ;width:100%" onclick="currentSlide(3)" alt="
+          Our robot (on the right) hanging on the hook before the competition.">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/robotvideo.png" style="height:142px ;width:100%" onclick="currentSlide(4)" alt="
+          Our 2019-2020 robot is moving!">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/robot_side.jpg" style="height:142px ;width:100%" onclick="currentSlide(5)" alt="
+          A side view of our robot.">
+        </div>
+        <div class="column2">
+          <img class="demo cursor" src="images/robot/robot_top.jpg" style="height:142px ;width:100%" onclick="currentSlide(6)" alt="
+          A top view of our robot.">
+        </div>
+      </div>
+    </div>
+    <br>
+
 
 <!-- Outreach section -->
     <div class="container" id="outreach">
@@ -342,14 +516,6 @@
                   </span>
                 </a>
               </li>
-              <li class="list-inline-item">
-                <a href="https://www.tumblr.com/blog/lcrobotics">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-tumblr fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -395,6 +561,37 @@
         } // End if
       });
     });
+    </script>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
     </script>
 
 
